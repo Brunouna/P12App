@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--Importando Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Importando materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+
+    <!--Importando stilo.css-->
+    <link rel="stylesheet" href="css/stilo.css">
+
+    <!--Otimizando o browser para dispositivo móvel-->
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<title>Prédio 12</title>
+</head>
+
+<body id="bgColor">
+
+    <!----------------------------------------------------------------->
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col s12 center-align">
+                <img class="responsive-img logoCadastro" src="img/Logo_SemFundo.png" alt="">
+            </div>
+
+            <form class="col s12" id="formValidate">
+                <div class="row">
+
+                    <div class="input-field col s12" style="margin-top: 0px;">
+                        <input style="margin-bottom: 10px;" id="txtNome" type="text" value="" required class="validate" aria-required="true">
+                        <label for="Nome">Usuário</label>
+                    </div>
+
+                    <div class="input-field col s12" style="margin-top: 0px;">
+                        <input style="margin-bottom: 10px;" id="txtMail" type="text" value="" required class="validate" required>
+                        <label for="Nome">E-Mail</label>
+                    </div>
+
+                    <div class="input-field col s12" style="margin-top: 0px;">
+                        <input style="margin-bottom: 10px;" id="txtTelefone" type="text" value="" required class="validate" required>
+                        <label for="Nome">Telefone</label>
+                    </div>
+
+                    <div class="input-field col s12" style="margin-top: 0px;">
+                        <input style="margin-bottom: 10px;" id="txtSenha" type="password" value="" required class="validate" required>
+                        <label for="Senha">Senha</label>
+                    </div>
+
+                    <form action="#">
+                        <div class="col s12 input-field">
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <input name="group1" type="radio" value="Resposavel" id="rbResponsavel" />
+                                    <label for="rbResponsavel">Responsável</label>
+                                </div>
+                                <div class="col s6">
+                                    <select id="listaApartamento">
+                                        <!--<option disabled selected class="fontSelectCadastro">Apartamento</option>-->
+                                        <option value="101">101</option>
+                                        <option value="102">102</option>
+                                        <option value="104">104</option>
+                                        <option value="201">201</option>
+                                        <option value="202">202</option>
+                                        <option value="203">203</option>
+                                        <option value="204">204</option>
+                                        <option value="301">301</option>
+                                        <option value="302">302</option>
+                                        <option value="303">303</option>
+                                        <option value="304">304</option>
+                                        <option value="401">401</option>
+                                        <option value="402">402</option>
+                                        <option value="403">403</option>
+                                        <option value="404">404</option>
+                                    </select>
+                                </div>
+                                <div style="margin-left: 6px;" class="col s12">
+                                    <input name="group1" value="Sindico" type="radio" id="rbSindico" />
+                                    <label for="rbSindico">Síndicos</label>
+                                </div>
+                                <!--<table>
+                                    <tr>
+                                        <td style="padding-top: 0px;padding-bottom: 37px;">
+                                            <input name="group1" type="radio" id="test1">
+                                            <label for="test1">Responsável</label>
+                                        </td>
+                                        <td style="padding-top: 0px;padding-bottom: 0px;">
+                                            <select>
+                                                <option value="" disabled selected >Qual o seu apartamento?</option>
+                                                <option value="101">101</option>
+                                                <option value="102">102</option>
+                                                <option value="104">104</option>
+                                                <option value="201">201</option>
+                                                <option value="202">202</option>
+                                                <option value="203">203</option>
+                                                <option value="204">204</option>
+                                                <option value="301">301</option>
+                                                <option value="302">302</option>
+                                                <option value="303">303</option>
+                                                <option value="304">304</option>
+                                                <option value="401">401</option>
+                                                <option value="402">402</option>
+                                                <option value="403">403</option>
+                                                <option value="404">404</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="padding-top: 0px;padding-bottom: 0px;">
+                                            <input name="group1" type="radio" id="teste2">
+                                            <label for="test2">Responsável</label>
+                                        </td>
+                                    </tr>
+                                </table> -->
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="col s12 center-align">
+                        <a class="waves-effect waves-light btn-flat btLogin" onclick="ApiCondominoPost()">CADASTRAR</a>
+                    </div>
+
+                    <div class="col s12 center-align">
+                        <label for="">LOGIN</label>
+                    </div>
+
+                </div>
+            </form>
+
+            <!-- Modal Cadastro -->
+            <div id="modalCadastro" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                    <center><h4>Alerta!</h4></center>
+                    <hr />
+                    <p id="txtModalCadastro"></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fechar</a>
+                </div>
+            </div>
+
+            <!-- Modal Preloader -->
+            <div id="modalloaderCadastro" class="modal modal-fixed-footer">
+                <div class="modal-content valign-wrapper">
+
+                    <div class="preloader-wrapper active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                                <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Aguarde...</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!----------------------------------------------------------------->
+    <!--Importando jQuery antes do materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!--chamando materialize JS-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--chamando js de efeitos-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!--Api de Cadastro (JS)-->
+    <script src="scripts/ApiCadastro.js"></script>
+</body>
+
+</html>

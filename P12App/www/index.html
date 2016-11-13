@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--Importando Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Importando materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <!--Importando stilo.css-->
+    <link rel="stylesheet" href="css/stilo.css">
+    <!--Otimizando o browser para dispositivo móvel-->
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prédio 12</title>
+</head>
+
+
+
+<body id="bgColor">
+    <!----------------------------------------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 menuGrid center-align"> <img class="responsive-img" src="img/Logo_SemFundo.png" alt=""> </div>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12 topoMargem">
+                        <input style="margin-bottom: 0px;" id="txtUsuario" type="text" value="" required class="validate">
+                        <label for="Nome">Usuário</label>
+                    </div>
+                    <div class="input-field col s12 topoMargem">
+                        <input id="txtSenha1" type="password" value="" required class="validate">
+                        <label for="Senha">Senha</label>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <div class="col s12 center-align">
+                    <a class="waves-effect waves-light btn-flat btLogin" onclick="ApiLogin()">Entrar</a>
+                </div>
+                <div class="col s12 center-align">
+                    <label onclick="cadastro()" for="">CADASTRAR</label>
+                </div>
+            </div>
+
+            <!-- Modal Trigger -->
+            <a class="modal-trigger waves-effect waves-light btn" href="#modalLogin">Modal</a>
+
+            <!-- Modal Login -->
+            <div id="modalLogin" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                    <center><h4>Alerta!</h4></center>
+                    <hr />
+                    <p id="txtModal1"></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fechar</a>
+                </div>
+            </div>
+
+            <!-- Modal Trigger -->
+            <a class="modal-trigger waves-effect waves-light btn" href="#modalloader">Modal</a>
+
+            <!-- Modal Preloader -->
+            <div id="modalloader" class="modal modal-fixed-footer">
+                <div class="modal-content valign-wrapper">
+
+                    <div class="preloader-wrapper active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                                <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Aguarde...</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!----------------------------------------------------------------->
+    <!--Importando jQuery antes do materialize.js-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--Conferir se é o mais recente-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--chamando js de efeitos-->
+    <script src="js/script.js"></script>
+    <!--Api de login (JS)-->
+    <script src="scripts/ApiLogin.js"></script>
+    <!--Redireciona Pagianas de login (JS)-->
+    <script src="scripts/Redrects.js"></script>
+</body>
+
+</html>
