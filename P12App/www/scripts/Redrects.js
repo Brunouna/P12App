@@ -4,11 +4,11 @@
 }
 
 function mural() {
-    window.location.href = "MarcacaoReuniao.html";
+    window.location.href = "mural.html";
     //alert('Mural');
 }
 function contas() {
-    window.location.href = 'ApPag.html';
+    window.location.href = 'apartamentos.html';
 }
 
 function caixa() {
