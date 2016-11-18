@@ -37,12 +37,14 @@
                     </div>
 
                     <div class="input-field col s12" style="margin-top: 0px;">
-                        <input style="margin-bottom: 10px;" id="txtMail" type="text" value="" required class="validate" required>
+                        <input style="margin-bottom: 10px;" id="txtMail" type="text" value="" required class="validate" required />                               
                         <label for="Nome">E-Mail</label>
                     </div>
 
                     <div class="input-field col s12" style="margin-top: 0px;">
-                        <input style="margin-bottom: 10px;" id="txtTelefone" type="text" value="" required class="validate" required>
+                        <input style="margin-bottom: 10px;" id="txtTelefone" type="text" value="" required class="validate" required
+                               onkeyup="mascara( this, mtel );"
+                               onblur="validarTelefone(this, document.getElementById('telefone_ajuda'));">
                         <label for="Nome">Telefone</label>
                     </div>
 
@@ -169,6 +171,8 @@
     <!--Importando jQuery antes do materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
+    <!--Máscara-->
+    <script src="scripts/mascara.js"></script>
     <!--chamando materialize JS-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--chamando js de efeitos-->
