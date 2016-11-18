@@ -21,7 +21,7 @@ function validarEmail(campoDeEntrada, textoAjuda) {
     if (validaCampo(campoDeEntrada, textoAjuda)) {
         // return false;
     }
-    //Então veja se o valor de entrada é um endereço de e-mail
+    //Então veja se o valor de entrada é um endereço de e-mai
     return validarExReg(/^[\w\.-_\+]+@[\w-]+(\.\w{2,3})+$/, campoDeEntrada.value, textoAjuda,
         "Insira um email válido (por exemplo, seuNome@gmail.com).");
 }
