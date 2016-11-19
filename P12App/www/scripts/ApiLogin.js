@@ -6,7 +6,7 @@ function ApiLogin() {
 
     jQuery.ajax({
         dataType: "json",
-        url: "http://oliveirabruno.com.br/api/Login",
+        url: "http://localhost:22593/api/Login",
         async: false,
         method: "POST",
         data: JSON.parse('{"Email": "' + document.getElementById("txtUsuario").value + '","Senha": "' + document.getElementById("txtSenha1").value + '"}'), //TRANSFORMA STRING EM JSON

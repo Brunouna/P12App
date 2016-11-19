@@ -90,8 +90,8 @@ function ApiPagamento() {
         url: "http://localhost:22593/api/pagamentos/",
         async: false,
         type: "POST", //Chamada metodo post
-        data: JSON.parse('{ "Janeiro": "' + document.getElementById("Janeiro").checked + '","Fevereiro": "' + document.getElementById("Fevereiro").checked + '", "Marco": "' + document.getElementById("Marco").checked + '","Abril": "' + document.getElementById("Abril").checked + '", "Maio": "' + document.getElementById("Maio").checked + '", "Junho": "' + document.getElementById("Junho").checked + '" , "Julho": "' + document.getElementById("Julho").checked + '" , "Agosto": "'
-            + document.getElementById("Agosto").checked + '" , "Setembro": "' + document.getElementById("Setembro").checked + '", "Outubro": "' + document.getElementById("Outubro").checked + '" , "Novembro": "' + document.getElementById("Novembro").checked + '" , "Dezembro": "' + document.getElementById("Dezembro").checked + '" , "Apartamento": "' + document.getElementById("Ap").textContent + '" }'), //TRANSFORMA STRING EM JSON
+        data: JSON.parse('{ "Janeiro": "' + document.getElementById("jan").checked + '","Fevereiro": "' + document.getElementById("fev").checked + '", "Marco": "' + document.getElementById("mar").checked + '","Abril": "' + document.getElementById("abr").checked + '", "Maio": "' + document.getElementById("mai").checked + '", "Junho": "' + document.getElementById("jun").checked + '" , "Julho": "' + document.getElementById("jul").checked + '" , "Agosto": "'
+            + document.getElementById("ago").checked + '" , "Setembro": "' + document.getElementById("set").checked + '", "Outubro": "' + document.getElementById("out").checked + '" , "Novembro": "' + document.getElementById("nov").checked + '" , "Dezembro": "' + document.getElementById("dez").checked + '" , "Apartamento": "' + document.getElementById("Ap").textContent + '" }'), //TRANSFORMA STRING EM JSON
         context: document.body
     }).success(function (data) {
         verificaCheckBox(data);
@@ -102,7 +102,10 @@ function modal(ap) {
     var texto = "Tem certeza que deseja efetuar o pagamento do apartamento ";
     document.getElementById("txtModal").innerHTML = texto + ap + "?";
 
-    $(document).ready(function () {
-        $("#myModal").modal();
-    });
+    ModalCarregando();
+
+    //MODAL DO LOAD
+    function ModalCarregando() {
+        $('#modalPagamento').modal('open');
+    }
 }

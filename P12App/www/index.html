@@ -33,35 +33,30 @@
                 </div>
             </form>
             <div>
-                <div class="col s12 center-align">
+                <div class="col s12 center-align" style="margin-top: 80px;">
                     <a class="waves-effect waves-light btn-flat btLogin" onclick="ApiLogin()">Entrar</a>
                 </div>
-                <div class="col s12 center-align">
+                <div class="col s12 center-align" style="margin-top: 20px;">
                     <label onclick="cadastro()" for="">CADASTRAR</label>
                 </div>
             </div>
 
-            <!-- Modal Trigger -->
-            <a class="modal-trigger waves-effect waves-light btn" href="#modalLogin">Modal</a>
-
             <!-- Modal Login -->
-            <div id="modalLogin" class="modal modal-fixed-footer">
+            <div id="modalLogin" class="modal">
+                <!--modal-fixed-footer-->
                 <div class="modal-content">
                     <center><h4>Alerta!</h4></center>
                     <hr />
-                    <p id="txtModal1"></p>
+                    <center><b><p id="txtModal1"></p></b></center>
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fechar</a>
                 </div>
             </div>
 
-            <!-- Modal Trigger -->
-            <a class="modal-trigger waves-effect waves-light btn" href="#modalloader">Modal</a>
-
             <!-- Modal Preloader -->
-            <div id="modalloader" class="modal modal-fixed-footer">
-                <div class="modal-content valign-wrapper">
+            <div id="modalloader" class="modal">
+                <div class="modal-content center-align"> <!--valign-wrapper-->
 
                     <div class="preloader-wrapper active">
                         <div class="spinner-layer spinner-blue-only">
@@ -74,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <h4>Aguarde...</h4>
+                    <h5 style="text-align: center">Aguarde...</h5>
                 </div>
             </div>
 
