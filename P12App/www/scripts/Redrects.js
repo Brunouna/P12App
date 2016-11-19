@@ -19,3 +19,7 @@ function notificacoes() {
     alert('notificações');
     alert("teste");
 }
+
+function telaLogin() {
+    window.location.href = 'index.html';
+}
