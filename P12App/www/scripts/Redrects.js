@@ -8,7 +8,7 @@ function mural() {
     //alert('Mural');
 }
 function contas() {
-    window.location.href = 'apartamentos.html';
+    window.location.href = 'ApPag.html';
 }
 
 function caixa() {

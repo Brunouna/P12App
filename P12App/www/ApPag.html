@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--Importando Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Importando materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <!--Importando stilo.css-->
+    <link rel="stylesheet" href="css/stilo.css">
+    <!--ink de icones-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Otimizando o browser para dispositivo móvel-->
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<title>Prédio 12</title>
+</head>
+
+<body>
+
+    <!--APARTAMENTOS-->
+    <div id="Apto">
+        <!-------------------------------Barra superior---------------------------------->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"> <i class="material-icons">menu</i> </a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="login.html">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--------------------------------Conteudo--------------------------------->
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(101)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>101</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(102)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>102</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(104)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>104</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(201)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>201</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(202)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>202</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(203)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>203</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(204)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>204</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(301)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>301</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(302)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>302</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(303)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>303</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(304)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>304</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(401)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>401</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(402)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>402</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(403)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>403</h6>
+                    </div>
+                    <!---------------------------------------------------------------------->
+                    <div style="padding-top:5%; padding-bottom:5%;" onclick="apiAp(404)" class="col s4 center-align btPrincipal waves-effect waves-light btn topoMargem">
+                        <h6>404</h6>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--PAGAMENTOS-->
+    <div id="Pag">
+        <!-------------------------------Barra superior---------------------------------->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"> <i class="material-icons">menu</i> </a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="login.html">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--------------------------------Conteudo--------------------------------->
+        <div class="container">
+            <div class="row">
+                <div class="col s6">
+                    Apartamento: 
+                    <label id="Ap">01</label>
+                    <!-- Label para receber o Nome do apartamento -->
+                </div>
+                <div class="col s6">
+                    <select class="selectpicker" name="" id="">
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="col s12">
+                    <p>
+                        Responsavel:
+                        <label id="Nome">Nome</label>
+                    </p>
+                    <!-- Label para receber o Nome do Responsavel -->
+                </div>
+                <div class="col s12">
+                    <p>
+                        Email:
+                        <label id="Mail">Email</label>
+                    </p>
+                    <!-- Label para receber o Email do Responsavel -->
+                </div>
+                <div class="col s12">
+                    <p>
+                        Telefone:
+                        <label id="Telefone">Telefone</label>
+                    </p>
+                    <!-- Label para receber o Telefone do Responsavel -->
+                    <hr>
+                </div>
+                <!-- Janeiro -->
+                <div class="col s6">
+                    <input type="checkbox" id="jan" />
+                    <label for="jan">Janeiro</label>
+                </div>
+                <!-- /.Janeiro -->
+                <!-- Fevereiro -->
+                <div class="col s6">
+                    <input type="checkbox" id="fev" />
+                    <label for="fev">Fevereiro</label>
+                </div>
+                <!-- /.Fevereiro -->
+                <!-- Março -->
+                <div class="col s6">
+                    <input type="checkbox" id="mar" />
+                    <label for="mar">Março</label>
+                </div>
+                <!-- /.Março -->
+                <!-- Abril -->
+                <div class="col s6">
+                    <input type="checkbox" id="abr" />
+                    <label for="abr">Abril</label>
+                </div>
+                <!-- /.Abril -->
+                <!-- Maio -->
+                <div class="col s6">
+                    <input type="checkbox" id="mai" />
+                    <label for="mai">Maio</label>
+                </div>
+                <!-- /.Maio -->
+                <!-- Junho -->
+                <div class="col s6">
+                    <input type="checkbox" id="jun" />
+                    <label for="jun">Junho</label>
+                </div>
+                <!-- /.Junho -->
+                <!-- Julho -->
+                <div class="col s6">
+                    <input type="checkbox" id="jul" />
+                    <label for="jul">Julho</label>
+                </div>
+                <!-- /.Julho -->
+                <!-- Agosto -->
+                <div class="col s6">
+                    <input type="checkbox" id="ago" />
+                    <label for="ago">Agosto</label>
+                </div>
+                <!-- /.Agosto -->
+                <!-- Setembro -->
+                <div class="col s6">
+                    <input type="checkbox" id="set" />
+                    <label for="set">Setembro</label>
+                </div>
+                <!-- /.Setembro -->
+                <!-- Outubro -->
+                <div class="col s6">
+                    <input type="checkbox" id="out" />
+                    <label for="out">Outubro</label>
+                </div>
+                <!-- /.Outubro -->
+                <!-- Novembro -->
+                <div class="col s6">
+                    <input type="checkbox" id="nov" />
+                    <label for="nov">Novembro</label>
+                </div>
+                <!-- /.Novembro -->
+                <!-- Dezembro -->
+                <div class="col s6">
+                    <input type="checkbox" id="dez" />
+                    <label for="dez">Dezembro</label>
+                </div>
+                <!-- /.Dezembro -->
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------->
+    <!--Importando jQuery antes do materialize.js-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--chamando materialize JS-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--chamando js de efeitos-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!--chamanda js da api ApPag-->
+    <script src="scripts/ApiApPag.js"></script>
+    <!----------------------------------------------------------------->
+    <script>
+        $(document).ready(function () {
+            $("#Pag").hide();
+        })
+    </script>
+
+</body>
+</html>
