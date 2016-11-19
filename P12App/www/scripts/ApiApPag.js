@@ -80,3 +80,29 @@ function verificaCheckBox(data) {
         document.getElementById("dez").disabled = true;
     }
 }
+
+
+function ApiPagamento() {
+    jQuery.support.cors = true;
+
+    jQuery.ajax({
+        dataType: "json",
+        url: "http://localhost:22593/api/pagamentos/",
+        async: false,
+        type: "POST", //Chamada metodo post
+        data: JSON.parse('{ "Janeiro": "' + document.getElementById("Janeiro").checked + '","Fevereiro": "' + document.getElementById("Fevereiro").checked + '", "Marco": "' + document.getElementById("Marco").checked + '","Abril": "' + document.getElementById("Abril").checked + '", "Maio": "' + document.getElementById("Maio").checked + '", "Junho": "' + document.getElementById("Junho").checked + '" , "Julho": "' + document.getElementById("Julho").checked + '" , "Agosto": "'
+            + document.getElementById("Agosto").checked + '" , "Setembro": "' + document.getElementById("Setembro").checked + '", "Outubro": "' + document.getElementById("Outubro").checked + '" , "Novembro": "' + document.getElementById("Novembro").checked + '" , "Dezembro": "' + document.getElementById("Dezembro").checked + '" , "Apartamento": "' + document.getElementById("Ap").textContent + '" }'), //TRANSFORMA STRING EM JSON
+        context: document.body
+    }).success(function (data) {
+        verificaCheckBox(data);
+    });
+}
+
+function modal(ap) {
+    var texto = "Tem certeza que deseja efetuar o pagamento do apartamento ";
+    document.getElementById("txtModal").innerHTML = texto + ap + "?";
+
+    $(document).ready(function () {
+        $("#myModal").modal();
+    });
+}
