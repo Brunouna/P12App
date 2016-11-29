@@ -10,55 +10,62 @@
     <link rel="stylesheet" href="css/stilo.css">
     <!--ink de icones-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!--Otimizando o browser para dispositivo móvel-->
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" /> </head>
 <title>Prédio 12</title>
 </head>
 
 <body>
+
     <!-------------------------------Barra superior---------------------------------->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" data-activates="mobile-demo" class="button-collapse"> <i class="material-icons">menu</i> </a> <a href="" class="brand-logo center">Mural</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="login.html">Sair</a></li>
+                <li><a href="index.html">Sair</a></li>
             </ul>
         </div>
     </nav>
     <!--------------------------------Conteudo--------------------------------->
     <div class="container">
         <div class="row">
+
             <!--------------------------------------------------------------------mural-->
-            <div style="padding-top:10%; padding-bottom:10%;" onclick="mural()" class="col s6 center-align btPrincipal waves-effect waves-light btn" href="#modal1">
-                <h6>Reunião</h6> </div>
+            <div style="padding-top:10%; padding-bottom:10%;" onclick="mural()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
+                <img src="img/iconMural.png" class="responsive-img imgSize" alt="">
+                <h6>Mural</h6>
+            </div>
             <!--------------------------------------------------------------------Contas-->
             <div style="padding-top:10%; padding-bottom:10%;" onclick="contas()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
-                <h6>Informações</h6> </div>
-        </div>
-        <div>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"> <span class="badge">16/11/2016</span> <i class="material-icons orange600">info_outline</i> Informações </div>
-                    <div class="collapsible-body">
-                        <p>Lâmpadas do corredor estão queimadas.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header"> <span class="badge">16/11/2016</span> <i class="material-icons orange600">supervisor_account</i> Reunião </div>
-                    <div class="collapsible-body">
-                        <p>Reunião mensal.</p>
-                    </div>
-                </li>
-            </ul>
+                <img src="img/iconContas.png" class="responsive-img imgSize" alt="">
+                <h6>contas</h6>
+            </div>
+            <!--------------------------------------------------------------------Caixa-->
+            <div style="padding-top:10%; padding-bottom:10%;" onclick="caixa()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
+                <img src="img/iconCaixa.png" class="responsive-img imgSize" alt="">
+                <h6>Caixa</h6>
+            </div>
+            <!--------------------------------------------------------------------Notificações-->
+            <div style="padding-top:10%; padding-bottom:10%;" onclick="notificacoes()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
+                <img src="img/vote.png" class="responsive-img imgSize" alt="">
+                <h6>Votação</h6>
+            </div>
+
         </div>
     </div>
     <!----------------------------------------------------------------->
     <!--Importando jQuery antes do materialize.js-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!--chamando materialize JS-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--chamando js de efeitos-->
     <script type="text/javascript" src="js/script.js"></script>
+    <!--redireciana telas (JS)-->
+    <script src="scripts/Redrects.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -59,7 +59,7 @@
 
                             <div class="row">
                                 <div class="col s6">
-                                    <input name="group1" type="radio" value="Resposavel" id="rbResponsavel" />
+                                    <input name="group1" type="checkbox" value="Resposavel" id="rbResponsavel" />
                                     <label for="rbResponsavel">Responsável</label>
                                 </div>
                                 <div class="col s6">
@@ -83,43 +83,9 @@
                                     </select>
                                 </div>
                                 <div style="margin-left: 6px;" class="col s12">
-                                    <input name="group1" value="Sindico" type="radio" id="rbSindico" />
+                                    <input name="group1" value="Sindico" type="checkbox" id="rbSindico" />
                                     <label for="rbSindico">Síndicos</label>
                                 </div>
-                                <!--<table>
-                                    <tr>
-                                        <td style="padding-top: 0px;padding-bottom: 37px;">
-                                            <input name="group1" type="radio" id="test1">
-                                            <label for="test1">Responsável</label>
-                                        </td>
-                                        <td style="padding-top: 0px;padding-bottom: 0px;">
-                                            <select>
-                                                <option value="" disabled selected >Qual o seu apartamento?</option>
-                                                <option value="101">101</option>
-                                                <option value="102">102</option>
-                                                <option value="104">104</option>
-                                                <option value="201">201</option>
-                                                <option value="202">202</option>
-                                                <option value="203">203</option>
-                                                <option value="204">204</option>
-                                                <option value="301">301</option>
-                                                <option value="302">302</option>
-                                                <option value="303">303</option>
-                                                <option value="304">304</option>
-                                                <option value="401">401</option>
-                                                <option value="402">402</option>
-                                                <option value="403">403</option>
-                                                <option value="404">404</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" style="padding-top: 0px;padding-bottom: 0px;">
-                                            <input name="group1" type="radio" id="teste2">
-                                            <label for="test2">Responsável</label>
-                                        </td>
-                                    </tr>
-                                </table> -->
                             </div>
                         </div>
                     </form>
@@ -128,8 +94,8 @@
                         <a class="waves-effect waves-light btn-flat btLogin" onclick="ApiCondominoPost()">CADASTRAR</a>
                     </div>
 
-                    <div class="col s12 center-align" onclick="telaLogin()">
-                        <label for="">LOGIN</label>
+                    <div class="col s12 center-align" style="margin-top: 20px;" onclick="telaLogin()">
+                        <label onclick="ApiLogin()" for="">LOGIN</label>
                     </div>
 
                 </div>
