@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -15,7 +15,7 @@
 <title>Prédio 12</title>
 </head>
 
-<body>
+<body onload="recebeVariavel1()"> 
     <!-------------------------------Barra superior---------------------------------->
     <nav>
         <div class="nav-wrapper">
@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row">
             <div class="col s6">
-                <label>Apartamento 01</label>
+                <label id="Ap">Apartamento 01</label>
                 <!-- Label para receber o Nome do apartamento -->
             </div>
             <div class="col s6">
@@ -53,19 +53,19 @@
             </div>
             <div class="col s12">
                 <p>Responsavel:
-                    <label>Nome</label>
+                    <label id="Nome">Nome</label>
                 </p>
                 <!-- Label para receber o Nome do Responsavel -->
             </div>
             <div class="col s12">
                 <p>Email:
-                    <label>Email</label>
+                    <label id="Mail">Email</label>
                 </p>
                 <!-- Label para receber o Email do Responsavel -->
             </div>
             <div class="col s12">
                 <p>Telefone:
-                    <label>Telefone</label>
+                    <label id="Telefone">Telefone</label>
                 </p>
                 <!-- Label para receber o Telefone do Responsavel -->
                 <hr> </div>
@@ -150,6 +150,8 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--chamando js de efeitos-->
     <script type="text/javascript" src="js/script.js"></script>
+    <!--chamando js de appag-->
+    <script src="scripts/ApiApPag.js"></script>
 </body>
 
 </html>

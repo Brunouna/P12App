@@ -26,8 +26,11 @@ function ApiLogin() {
             var texto = "Preencha todos os campos!"
             modal(texto);
         }
-        else if (data.length != 0) {
+        else if (data[0].Sindico == true) {
             window.location.href = 'Principal.html';
+        }
+        else if (data[0].Sindico == false) {            
+            window.location.href = 'S_Principal.html?minhaVariavel=' + data[0].Id;
         }
         else {
             var acesso = "Acesso Negado";
@@ -35,7 +38,6 @@ function ApiLogin() {
         }
     }
 }
-
 
 //MODAL DO LOAD
 function ModalCarregando() {

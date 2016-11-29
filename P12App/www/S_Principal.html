@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -16,7 +16,7 @@
 <title>Prédio 12</title>
 </head>
 
-<body>
+<body onload="recebeVariavel()">
 
     <!-------------------------------Barra superior---------------------------------->
     <nav>
@@ -34,12 +34,12 @@
         <div class="row">
 
             <!--------------------------------------------------------------------mural-->
-            <div style="padding-top:10%; padding-bottom:10%;" onclick="mural()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
+            <div style="padding-top:10%; padding-bottom:10%;" onclick="muralCondominos()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
                 <img src="img/iconMural.png" class="responsive-img imgSize" alt="">
                 <h6>Mural</h6>
             </div>
             <!--------------------------------------------------------------------Contas-->
-            <div style="padding-top:10%; padding-bottom:10%;" onclick="contas()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
+            <div style="padding-top:10%; padding-bottom:10%;" onclick="contasCondominos()" class="col s6 center-align btPrincipal waves-effect waves-light btn">
                 <img src="img/iconContas.png" class="responsive-img imgSize" alt="">
                 <h6>contas</h6>
             </div>
@@ -66,6 +66,8 @@
     <script type="text/javascript" src="js/script.js"></script>
     <!--redireciana telas (JS)-->
     <script src="scripts/Redrects.js"></script>
+
+    <input type="hidden" name="name" id="apto" value="" />
 </body>
 
 </html>

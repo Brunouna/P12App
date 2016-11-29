@@ -4,7 +4,7 @@
 
     jQuery.ajax({
         dataType: "json",
-        url: "http://localhost:22593/api/apartamentos/" + id,
+        url: "http://oliveirabruno.com.br/api/apartamentos/" + id,
         async: false,
         context: document.body
     }).success(function (data) {
@@ -87,7 +87,7 @@ function ApiPagamento() {
 
     jQuery.ajax({
         dataType: "json",
-        url: "http://localhost:22593/api/pagamentos/",
+        url: "http://oliveirabruno.com.br/api/pagamentos/",
         async: false,
         type: "POST", //Chamada metodo post
         data: JSON.parse('{ "Janeiro": "' + document.getElementById("jan").checked + '","Fevereiro": "' + document.getElementById("fev").checked + '", "Marco": "' + document.getElementById("mar").checked + '","Abril": "' + document.getElementById("abr").checked + '", "Maio": "' + document.getElementById("mai").checked + '", "Junho": "' + document.getElementById("jun").checked + '" , "Julho": "' + document.getElementById("jul").checked + '" , "Agosto": "'
@@ -109,3 +109,34 @@ function modal(ap) {
         $('#modalPagamento').modal('open');
     }
 }
+
+function recebeVariavel1() {
+    var loc = location.search.substring(1, location.search.length);
+    var variavel = loc.split("=");
+
+    teste(variavel[1]);
+}
+
+function teste(id) {
+
+    jQuery.support.cors = true;
+
+    jQuery.ajax({
+        dataType: "json",
+        url: "http://oliveirabruno.com.br/api/apartamentos/" + id,
+        async: false,
+        context: document.body
+    }).success(function (data) {
+        Apt(data);
+    });
+
+    function Apt(data) {
+        document.getElementById("Ap").innerHTML = id;
+        document.getElementById("Nome").innerHTML = data.Nome;
+        document.getElementById("Mail").innerHTML = data.Email;
+        document.getElementById("Telefone").innerHTML = data.Telefone;
+
+        verificaCheckBox(data);
+    }
+}
+
