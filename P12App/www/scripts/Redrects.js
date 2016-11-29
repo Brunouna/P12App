@@ -24,7 +24,7 @@ function contasCondominos() {
 
 
 function caixa() {
-    alert('caixa');
+    window.location.href = 'caixa.html';
 }
 
 function notificacoes() {
