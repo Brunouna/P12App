@@ -35,6 +35,14 @@ function telaLogin() {
     window.location.href = 'index.html';
 }
 
+function informacoes() {
+    window.location.href = 'informacoes.html';
+}
+
+function reuniao() {
+    window.location.href = 'reuniao.html';
+}
+
 function recebeVariavel() {
     var loc = location.search.substring(1, location.search.length);
     var variavel = loc.split("=");
